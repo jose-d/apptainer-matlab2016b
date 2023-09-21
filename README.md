@@ -32,3 +32,10 @@ sudo apptainer build ./debian-image-withX.sif ./debian-image-withX.def
 ```
 sudo apptainer build --bind /mnt/iso/1:/mnt --bind /mnt/iso/2:/root/Downloads/MathWorks/R2016b/ ./Matlab-2016b_debian-jessie.sif ./debian-image-upper.def
 ```
+
+## Run Matlab
+
+```
+As matlab is in `runscript`, it's enough to execute directly the resulting `Matlab-2016b_debian-jessie.sif` image.
+Installed apptainer is required.
+```
