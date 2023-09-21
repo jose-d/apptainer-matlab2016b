@@ -2,6 +2,8 @@
 
 ## Build procedure
 
+The procedure is three-staged, first level image contains base debian image, on top of that dependencies are installed, and in the final layer, we install Matlab.
+
 ### mount matlab installation isos
 
 at build host, do:
@@ -19,7 +21,7 @@ sudo mount -o loop ./isos/R2016b_glnxa64_dvd2.iso /mnt/iso/2
 sudo apptainer build debian-image.sif debian-image.def
 ```
 
-### build image with X and build eseentials
+### build image with X and build-essential
 
 Actually, `sudo` is again needed, because X installation has some weird scripts which need real root, so fakeroot is not working...
 
