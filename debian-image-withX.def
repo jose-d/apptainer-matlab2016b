@@ -1,0 +1,22 @@
+Bootstrap: localimage
+From: debian-image.sif
+
+%help
+
+   This recipe installs X and buil-essential packages into debian image
+
+%labels
+
+   Author Josef Dvoracek
+   Version v20230921_1027
+
+%post
+
+  export DEBIAN_FRONTEND=noninteractive
+
+  apt-get clean
+  apt-key update
+  apt-get install --assume-yes --force-yes --reinstall ca-certificates
+  apt update --force-yes
+  apt install -y --force-yes wget strace xorg build-essential
+  apt upgrade -y --force-yes
