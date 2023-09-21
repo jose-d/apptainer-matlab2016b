@@ -37,7 +37,5 @@ sudo apptainer build --bind /mnt/iso/1:/mnt --bind /mnt/iso/2:/root/Downloads/Ma
 
 ## Run Matlab
 
-```
-As matlab is in `runscript`, it's enough to execute directly the resulting `Matlab-2016b_debian-jessie.sif` image.
-Installed apptainer is required.
-```
+As matlab is in `%runscript` section, it's enough to execute directly the resulting `Matlab-2016b_debian-jessie.sif` image.
+Indeed installing apptainer is required.
