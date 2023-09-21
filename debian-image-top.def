@@ -1,0 +1,24 @@
+Bootstrap: localimage
+From: debian-image-withX.sif
+
+%help
+   This recipe installs Matlab into debian image
+
+%setup
+   mkdir -p ${APPTAINER_ROOTFS}/root/Downloads/MathWorks/R2016b/
+
+%labels
+
+   Author Josef Dvoracek
+   Version v20230919_1312
+
+%files
+  installer_input.txt /installer_input.txt
+  network.lic /network.lic
+
+%post
+
+  /mnt/install -inputFile /installer_input.txt -mode silent
+
+%runscript
+  /usr/local/bin/matlab "$@"
