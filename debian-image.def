@@ -1,0 +1,12 @@
+Bootstrap: debootstrap
+OSVersion: jessie
+MirrorURL: http://archive.debian.org/debian/
+
+%help
+
+  This apptainer image contains minimal install of Debian Jessie installed by debootstrap from http://archive.debian.org/debian/
+
+%labels
+
+   Author Josef Dvoracek
+   Version v20230921_1020
